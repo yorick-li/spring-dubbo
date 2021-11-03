@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.demo.pojo.User;
 import com.demo.service.IUserService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,16 @@ public class UserController {
     @RequestMapping("/sayHello")
     public String sayHello() {
         return userService.sayHello();
+    }
+
+    /**
+     * 根据id查询用户
+     * @param id
+     * @return
+     */
+    @RequestMapping("/findUser")
+    public User findById(int id) {
+        return userService.findById(id);
     }
 
 }
