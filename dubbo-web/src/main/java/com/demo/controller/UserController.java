@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class UserController {
 
     // 引用服务提供者
-    @Reference
+    @Reference(version = "v2.0")
 //    @Autowired
     private IUserService userService;
 
