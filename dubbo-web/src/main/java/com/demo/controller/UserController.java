@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class UserController {
 
     // 引用服务提供者
-    @Reference(version = "v2.0")
+    @Reference(version = "v1.0", loadbalance = "consistenthash")
 //    @Autowired
     private IUserService userService;
 

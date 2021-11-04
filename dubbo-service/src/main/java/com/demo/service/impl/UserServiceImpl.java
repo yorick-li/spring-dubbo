@@ -7,12 +7,15 @@ import org.apache.dubbo.config.annotation.Service;
 import java.util.concurrent.TimeUnit;
 
 // 重试次数为：n，则会进入服务的方法：n+1 次
-@Service(timeout=3000, retries=3, version = "v1.0")
+@Service(timeout=3000, retries=3, version = "v1.0", weight = 200)
 public class UserServiceImpl implements IUserService {
 
     @Override
     public String sayHello() {
-        return "hello dubbo! I love you~" + "! The service provider's version is: v1.0";
+//        return "hello dubbo! I love you~" + "! The service provider's version is: v1.0";
+//        return "1....";
+//        return "2....";
+        return "3....";
     }
 
 
