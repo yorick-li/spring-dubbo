@@ -11,10 +11,10 @@
         http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
 <!--    <context:component-scan base-package="com.demo.service.impl" />-->
-    <dubbo:protocol port="20883"></dubbo:protocol>
+    <dubbo:protocol port="20885"></dubbo:protocol>
     <!--1.配置应用的名称-->
     <dubbo:application name="dubbo-service">
-        <dubbo:parameter key="qos.port" value="22225"/>
+        <dubbo:parameter key="qos.port" value="22227"/>
     </dubbo:application>
     <!--2.配置注册中心地址-->
     <dubbo:registry address="zookeeper://172.26.9.39:2181" />

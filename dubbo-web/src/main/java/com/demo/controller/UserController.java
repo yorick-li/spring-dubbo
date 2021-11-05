@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class UserController {
 
     // 引用服务提供者
-    @Reference(version = "v1.0", loadbalance = "consistenthash")
+    @Reference(version = "v1.0", loadbalance = "random", cluster = "failover", retries = 2)
 //    @Autowired
     private IUserService userService;
 
@@ -28,7 +28,6 @@ public class UserController {
      * @param id
      * @return
      */
-    int i = 1;
     @RequestMapping("/findUser")
     public User findById(int id) {
         // 启动一个线程计时：超时时间
