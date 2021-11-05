@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class UserController {
 
     // 引用服务提供者
-    @Reference(version = "v1.0", loadbalance = "random", cluster = "failover", retries = 2, mock = "force:return null")
+    @Reference(version = "v1.0", loadbalance = "random", cluster = "failover", retries = 2, mock = "fail:return null")
 //    @Autowired
     private IUserService userService;
 

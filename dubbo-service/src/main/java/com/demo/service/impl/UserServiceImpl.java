@@ -35,11 +35,11 @@ public class UserServiceImpl implements IUserService {
 
         User user = new User(1, "zhangsan", 26);
         // 利用线程模拟超时
-//        try {
-//            TimeUnit.SECONDS.sleep(3);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return user;
     }
 
