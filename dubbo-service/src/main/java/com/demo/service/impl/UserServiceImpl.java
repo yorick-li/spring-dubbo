@@ -7,7 +7,7 @@ import org.apache.dubbo.config.annotation.Service;
 import java.util.concurrent.TimeUnit;
 
 // 重试次数为：n，则会进入服务的方法：n+1 次
-@Service(timeout=1000, retries=1, version = "v1.0", weight = 200)
+@Service(timeout=1000, retries=2, version = "v1.0", weight = 200)
 public class UserServiceImpl implements IUserService {
 
     @Override
